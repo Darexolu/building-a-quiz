@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Building a Quiz</title>
+</head>
+<body>
+<header>
+    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+    <h1>HTML/CSS QUIZ</h1>
+<nav>
+    <ul>
+        <li><a href="#student-info" access-key="s">INFO</a>
+        </li><li><a href="#html-questions" access-key="h">HTML</a></li>
+        <li><a href="#css-questions" access-key="c">CSS</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+    <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+<section role="region" aria-labelledby="student-info">
+    <h2 id="student-info">INFO</h2>
+<div class="info">
+    <label for="student-name">Name:</label>
+    <input id="student-name" name="name" type="text" placeholder="Full Name" required/></div>
+    <div class="info">
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required/>
+    </div>
+<div class="info">
+    <label for="birth-date">D.O.B:
+        <span class="sr-only">(Date of Birth)</span>
+    </label>
+    <input id="birth-date" type="date" name="DOB" required /></div></section>
+<section role="region" aria-labelledby="html-questions">
+    <h2 id="html-questions">HTML</h2>
+<div class="question-block">
+    <p>1</p><fieldset name="question1" class="question">
+<legend>Do you love sport activities?</legend>
+<ul class="answers-list">
+    <li>
+        <label for="true1">
+        <input id="true1" type="radio" value="True" name="truefalse1"/>True</label>
+    </li>
+    <li>
+        <label for="false1">
+            <input id="false1" type="radio" value="False" name="truefalse1"/>False</label>
+        </li>
+    </ul>
+</fieldset>
+</div>
+<div class="question-block">
+    <p>2</p>
+    <fieldset name="question2" class="question">
+        <legend>Are u a football fan?</legend>
+        <ul class="answers-list"><li><label for="true2">
+            <input id="true2" type="radio" value="True" name="truefalse1b"/>True</label>
+        </li>
+        <li><label for="false2">
+            <input id="false2" type="radio" value="False" name="truefalse1b"/>False</label>
+        </li>
+    </ul>
+</fieldset>
+</div>
+</section>
+<section role="region"  aria-labelledby="css-questions">
+    <h2 id="css-questions">CSS</h2>
+<div class="formrow">
+    <div class="question-block">
+        <label for="answer1">Are u a front-end developer?</label>
+    </div>
+<div class="answer">
+    <select name="front-end" id="answer1">
+        <option value="">Select an option</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+</div>
+<div class="question-block">
+    <label for="textarea">Do you have questions:</label>
+</div>
+<div class="answer">
+    <textarea rows="5" cols="24" id="textarea" name="textarea" placeholder="e.g Olushola Damilare did this..."></textarea>
+</div>
+</section>
+<button type="submit">Submit</button>
+</form>
+</main>
+<footer>
+    <address>
+        <a href="https://freecodecamp.org">freecodecamp</a>
+        <br />San francisco<br />California<br />USA</address>
+    </footer>
+</body>
+</html>
